@@ -1,0 +1,36 @@
+/* Seletores CSS */
+
+
+h1{
+
+    /* Centralizar Elementos */
+    text-align: center;
+    /* Cor do Texto */
+    color: turquoise;
+    /* Colocar em negrito */
+    font-weight: bold;
+}
+
+table{
+
+    /* Largura de Tabela */
+    width: 100%;
+    /* Colocar uma Borda */
+    border: 1px solid;
+
+}
+
+td{
+
+    /* Centralizar Elementos */
+    text-align: center;
+
+}
+
+thead{
+
+    /* Cor de Fundo */
+    background-color: blueviolet;
+
+}
+
