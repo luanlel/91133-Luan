@@ -79,6 +79,14 @@ header {
     width: 70px;
     margin: 10px;
     flex: 1;
+    border-radius: 4px;
+
+}
+
+.box:hover {
+
+    background-color: gray;
+    
 
 }
 
@@ -131,5 +139,13 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+
+}
+
+@media(max-width: 768px){
+
+    .content .box, .featured .box, .boxes .box{
+        width: 80%;
+    }
 
 }
