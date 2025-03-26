@@ -18,7 +18,6 @@ header {
     color: white;
     padding-bottom: 15px;
 
-
 }
 
 .row {
@@ -28,7 +27,6 @@ header {
     width: 100%; /* Garante que a linha ocupe toda a largura disponível */
     
 }
-
 
 .hero {
 
@@ -51,7 +49,6 @@ header {
     justify-content: center;
     align-items: center;
     
-
 }
 
 .featured {
@@ -103,7 +100,6 @@ header {
     justify-content: space-evenly;
     width: 100%;
     
-
 }
 
 a {
@@ -142,10 +138,11 @@ footer {
 
 }
 
-@media(max-width: 768px){
+@media(max-width: 1000px){
 
-    .content .box, .featured .box, .boxes .box{
-        width: 80%;
+    .content .box, .featured .box, .boxes .box, .hero{
+        background-image: url(trollge.jpg);
+        color: white;
     }
 
 }
