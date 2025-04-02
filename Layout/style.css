@@ -23,7 +23,8 @@
 
     background-color: rgb(158, 146, 132);
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
     
 
 }
