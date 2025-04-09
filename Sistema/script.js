@@ -18,6 +18,6 @@ if (password.length < 8) {
 // Salva o nome de usuário no localStorage
 localStorage.setItem("username", username);
 
-window.location.href = "painel.html"; // Abre uma nova página chamada painel.html
+window.location.href = "produtos.html"; // Abre uma nova página chamada painel.html
 alert("Login realizado com sucesso!"); // Pop-up de sucesso
 });
