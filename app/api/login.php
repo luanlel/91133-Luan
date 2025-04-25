@@ -1,45 +1,48 @@
 <?php
 session_start();
 include 'conexao.php';
-if ($_SERVER['request_method'] !== 'post') {
-    header("Location: http://localhost/app/index.html");
-    exit;
-}
 
-if (empty($usuario) || empty($senha)) {
-    echo "<script>
-        alert('Preencha todos os campos!');
-        window.location.href = 'localhost://app/index.html';
-        </script>";
-    exit;
-}
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Recupera os dados do formulário
+    $usuario = trim($_POST['usuario']);
+    $senha   = trim($_POST['senha']);
 
-$stmt = $conn->prepare("SELECT * FROM usuarios WHERE usuario = ? AND senha = password");
-$stmt->bind_param("ss", $usuario, $senha);
-$stmt->execute();
-$resultado = $stmt->get_result();
+    // Verifica se os campos não estão vazios
+    if (empty($usuario) || empty($senha)) {
+        echo "<script>
+                alert('Preencha todos os campos.');
+                window.location.href = 'http://localhost:8080/app/index.html';
+              </script>";
+        exit;
+    }
 
-if ($resultado->num_rows === 1) {
+    // Prepara a consulta para buscar o usuário e validar a senha utilizando a função PASSWORD do MySQL
+    $stmt = $conn->prepare("SELECT * FROM usuarios WHERE usuario = ? AND senha = PASSWORD(?)");
+    $stmt->bind_param("ss", $usuario, $senha);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
 
-    $_session['usuario'] = $usuario;
-    echo "<script>
-            alert('Login realizado com sucesso!');
-            window.location.href = 'http://localhost/app/cad.html';
-        </script>";
-} else {
-    echo "<script>
-        alert('Usuário ou senha inválidos!');
-        window.location.href = 'http://localhost/app/';
-        </script>";
+    if ($resultado->num_rows === 1) {
+        // Login bem-sucedido: iniciar sessão e redirecionar
+        $_SESSION['usuario'] = $usuario;
+        echo "<script>
+                alert('Login realizado com sucesso!');
+                window.location.href = 'http://localhost:8080/app/cad.html';
+              </script>";
+    } else {
+        // Login falhou: redireciona de volta ao login
+        echo "<script>
+                alert('Usuário ou senha incorretos!');
+                window.location.href = 'http://localhost:8080/app/index.html';
+              </script>";
+    }
 
     $stmt->close();
     $conn->close();
     exit;
-
 } else {
-    header
+    // Caso o acesso não seja via POST, redireciona para a página de login
+    header("Location: http://localhost:8080/app/index.html");
+    exit;
 }
-
-
-
 ?>

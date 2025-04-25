@@ -1,10 +1,4 @@
 <?php
-// Verifica se a requisição é POST
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    // Redireciona para a página inicial se for acesso direto
-    header("Location: http://localhost:8080/app/index.html");
-    exit;
-}
 
 $host = "localhost";
 $usuario = "root";
@@ -18,7 +12,5 @@ $conn = new mysqli($host, $usuario, $senha, $banco);
 if ($conn->connect_error) {
     die("Erro na conexão: " . $conn->connect_error);
 }
-
-
 
 ?>
