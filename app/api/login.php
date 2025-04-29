@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($usuario) || empty($senha)) {
         echo "<script>
                 alert('Preencha todos os campos.');
-                window.location.href = 'http://localhost:8080/app/index.html';
+                window.location.href = 'http://localhost:8081/app/index.html';
               </script>";
         exit;
     }
@@ -27,13 +27,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION['usuario'] = $usuario;
         echo "<script>
                 alert('Login realizado com sucesso!');
-                window.location.href = 'http://localhost:8080/app/cad.html';
+                window.location.href = 'http://localhost:8081/app/cad.html';
               </script>";
     } else {
         // Login falhou: redireciona de volta ao login
         echo "<script>
                 alert('Usuário ou senha incorretos!');
-                window.location.href = 'http://localhost:8080/app/index.html';
+                window.location.href = 'http://localhost:8081/app/index.html';
               </script>";
     }
 
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     exit;
 } else {
     // Caso o acesso não seja via POST, redireciona para a página de login
-    header("Location: http://localhost:8080/app/index.html");
+    header("Location: http://localhost:8081/app/index.html");
     exit;
 }
 ?>

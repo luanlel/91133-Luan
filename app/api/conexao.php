@@ -2,7 +2,7 @@
 // Verifica se a requisição é POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     // Redireciona para a página inicial se for acesso direto
-    header("Location: http://localhost:8080/app/index.html");
+    header("Location: http://localhost:8081/app/index.html");
     exit;
 }
 
