@@ -1,0 +1,12 @@
+/* Ajusta o nav para preencher toda a largura da tela */
+.navbar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Define um tamanho consistente para as imagens do carrossel */
+.carousel-inner img {
+    height: 400px; /* Ajuste o valor conforme necessário */
+    object-fit: cover; /* Garante que as imagens sejam cortadas proporcionalmente */
+}
