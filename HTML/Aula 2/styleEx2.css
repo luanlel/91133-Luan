@@ -1,0 +1,45 @@
+body{
+
+    text-align: center;
+
+}
+
+label{
+    
+    color: rgb(2, 2, 66);
+    font-weight: bold;
+    
+}
+
+input{
+    width: 220px;
+    /* Bordas Arredondadas */
+    border-radius: 4px;
+    align-content: center;
+}
+
+textarea{
+    width: 220px;
+    /* Bordas Arredondadas */
+    border-radius: 4px;
+    font-weight: bold;
+    color: rgb(2, 2, 66);
+    
+}
+
+button{
+
+    width: 100px;
+    height: 30px;
+    color: rgb(2, 2, 66);
+    background-color: rgb(12, 154, 95);
+
+}
+
+button:hover{
+
+    color: rgb(71, 255, 224);
+    background-color: blueviolet;
+    font-weight: bold;
+
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleEx2.css">
+    <title>Formulário</title>
+</head>
+<body>
+    
+    <h1>Formulário</h1>
+
+    <form action="/enviar" method="POST">
+        <!-- Campo de Texto para Nome -->
+         <label for="nome">Nome:</label><br>
+         <input type="text" id="nome" name="nome" required><br><br>
+
+         <!-- Campo de Email -->
+          <label for="email">E-mail:</label><br>
+          <input type="email" name="email" required><br><br>
+
+          <!-- Campo de Senha -->
+           <label for="senha">Senha:</label><br>
+           <input type="password" id="senha" name="senha" required><br><br>
+
+           <!-- Campo de Mensagem -->
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea name="mensagem" id="mensagem" rows="4" cols="50" required></textarea><br><br>
+
+            <!-- Botão para Enviar -->
+             <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>

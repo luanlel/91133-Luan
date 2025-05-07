@@ -1,0 +1,84 @@
+/* Zera as configs da pág */
+
+*{
+    margin: 0; /* Zera a margem */
+    padding: 0; /* Zera espaço */
+    box-sizing: border-box; /* Zera bordas */ 
+}
+
+header{
+
+    background-color: rgb(66, 177, 66);
+    padding: 30px;
+    border-radius: 7px;
+
+}
+
+ul li{
+
+    list-style: none; /* Tira as bolinhas */
+    display: inline;
+    padding: 8px;
+
+}
+
+a{
+
+    text-decoration: none; /* Tira o sublinhado */
+    color: black;
+    font-family: "MedievalSharp", cursive;
+    font-weight: bold;
+    font-size: 18pt;
+    cursor: pointer;
+    
+
+}
+
+a:hover{
+
+    color: darkblue;
+    text-decoration: underline;
+    padding: 12px;
+    transition: 5ms;
+    background-color: rgb(22, 110, 22);
+    border-radius: 10px;
+
+}
+
+section{
+
+    margin-top: 100px;
+
+
+}
+
+h2{
+
+    background-color: green;
+    font-family: "MedievalSharp", cursive;
+    border-radius: 5px;
+
+}
+
+p{
+
+    background-color: rgb(174, 226, 174);
+    font-family: "MedievalSharp", cursive;
+    text-align: justify;
+    border-radius: 7px;
+
+}
+
+.rodapé{
+
+    margin-top: 615px;
+    text-align: center;
+
+}
+
+html{
+
+    scroll-behavior: smooth;
+    transition: 5ms;
+
+}

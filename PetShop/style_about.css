@@ -1,0 +1,93 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    font-family: "Itim", cursive;
+    font-style: normal;
+    scroll-behavior: smooth;
+
+}
+
+header {
+
+    background-color: rgb(255, 123, 0);
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 0;
+    
+}
+
+body {
+
+    line-height: 1.6;
+
+}
+
+.centro_ab {
+
+    padding: 50px 20px;
+    text-align: center;
+
+}
+
+h1 {
+
+    font-size: 35px;
+    margin-bottom: 30px;
+    color:  rgb(255, 123, 0);
+
+}
+
+p {
+
+    font-size: 23px;
+
+}
+
+nav ul{
+
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+
+}
+
+footer {
+
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(255, 123, 0);
+    padding: 15px;
+    font-weight: bold;
+
+}
+
+a {
+
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: larger;
+
+}
+
+.header a:hover {
+
+    color: rgb(255, 230, 0);
+
+}
+
+li {
+
+    list-style: none;
+    margin: 0 15px;
+
+}
