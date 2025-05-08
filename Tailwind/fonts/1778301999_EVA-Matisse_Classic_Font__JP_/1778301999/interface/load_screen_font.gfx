@@ -1,0 +1,7 @@
+bitmapfonts = {
+	
+	bitmapfont = {
+		name = "load_screen"
+		path = "gfx/fonts/EVA-Matisse_Classic 20"
+	}
+}
