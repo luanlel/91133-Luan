@@ -3,14 +3,12 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Calculadora Simples</title>
-    <style>
-        body { font-family: Arial; background: #f4f4f4; }
-        .calc { background: #fff; padding: 20px; max-width: 300px; margin: 50px auto; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
-        input, select, button { margin: 5px 0; width: 100%; padding: 8px; }
-    </style>
+    <title>calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
 </head>
 <body>
+    <div id="fade"></div>
+    <audio id="bg-music" src="/Grandpa's Smoke.mp3" autoplay loop></audio>
     <div class="calc">
         <h2>Calculadora</h2>
         <input type="number" id="n1" placeholder="Número 1">
@@ -25,6 +23,16 @@
         <p id="resultado"></p>
     </div>
     <script>
+        
+        window.onload = function() {
+            const fade = document.getElementById('fade');
+            fade.style.opacity = 0;
+            setTimeout(() => fade.style.display = 'none', 1200);
+
+            document.getElementById('n1').value = '';
+            document.getElementById('n2').value = '';
+        };
+
         function calcular() {
             const n1 = parseFloat(document.getElementById('n1').value);
             const n2 = parseFloat(document.getElementById('n2').value);
@@ -35,7 +43,7 @@
                 case 'soma': resultado = n1 + n2; break;
                 case 'sub': resultado = n1 - n2; break;
                 case 'multi': resultado = n1 * n2; break;
-                case 'div': resultado = n2 !== 0 ? n1 / n2 : 'Divisão por zero'; break;
+                case 'div': resultado = n2 !== 0 ? n1 / n2 : 'Divisão por zero, inválido!'; break;
             }
             document.getElementById('resultado').innerText = 'Resultado: ' + resultado;
         }
