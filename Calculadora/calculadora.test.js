@@ -104,3 +104,7 @@ test('A divisão de 0,000001 / 0,001 é igual a 0,001', () => {
 test('A divisão de (-)122,4 / √4**3 é igual a (-)15,3', () => {
     expect(div(-122.4, Math.sqrt(4)**3)).toBe(-15.3);
 });
+
+test('A divisão de (-)166666.66666666666 / 1000 / 6 é igual a (-)1000', () => {
+    expect(div(-166666.66666666666, 1000 / 6)).toBe(-1000);
+});
