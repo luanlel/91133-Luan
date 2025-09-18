@@ -1,7 +1,3 @@
-// Título: Classe de produto e mercadinho
-// Autor: Luan de Lima
-// Data: 18/09/2025
-
 class Produto {
   constructor(id, nome, preco, quantidade) {
     this.id = id;
