@@ -3,7 +3,7 @@
 const { Produto, Mercadinho } = require('./Mercadinho');
 
 describe('Remoção de produto existente', () => {
-  it('Deve remover produto válido e retornar true', () => {
+  it('Ao remover um produto válido, o método deve retornar true. O produto não deve mais aparecer na lista.', () => {
 
     // cenário
     const mercado = new Mercadinho();
