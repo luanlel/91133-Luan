@@ -3,7 +3,7 @@
 const { Produto, Mercadinho } = require('./Mercadinho');
 
 describe('Atualização de produto inexistente', () => {
-  it('Deve retornar false ao tentar atualizar produto que não existe', () => {
+  it('Ao tentar atualizar um produto que não existe, o método deve retornar false.', () => {
 
     // cenário
     const mercado = new Mercadinho();
