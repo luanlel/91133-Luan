@@ -3,7 +3,7 @@
 const { Produto, Mercadinho } = require('./Mercadinho');
 
 describe('Limpeza da lista', () => {
-  it('Deve esvaziar a lista após chamar limpar()', () => {
+  it('Após adicionar produtos e chamar limpar(), a lista deve estar vazia.', () => {
     // cenário
     const mercado = new Mercadinho();
     mercado.adicionarProduto(new Produto(9, 'Farinha', 7, 9));
