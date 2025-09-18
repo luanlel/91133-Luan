@@ -4,7 +4,7 @@
 const { Produto, Mercadinho } = require('./Mercadinho');
 
 describe('Atualização de nome do produto', () => {
-  it('Deve atualizar apenas o nome e manter os outros campos', () => {
+  it('Ao atualizar apenas o nome de um produto existente, os demais campos devem permanecer iguais. O retorno deve ser true.', () => {
 
     // cenário
     const mercado = new Mercadinho();
