@@ -3,7 +3,7 @@
 const { Produto, Mercadinho } = require('./Mercadinho');
 
 describe('Controle de estoque', () => {
-  it('Deve atualizar a quantidade corretamente', () => {
+  it('Ao atualizar a quantidade de um produto, a alteração deve ser refletida corretamente.', () => {
 
     // cenário
     const mercado = new Mercadinho();
