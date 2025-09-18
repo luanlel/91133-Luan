@@ -3,7 +3,7 @@
 const { Produto, Mercadinho } = require('./Mercadinho');
 
 describe('Listagem de produtos', () => {
-  it('Deve retornar lista com exatamente os produtos adicionados', () => {
+  it('Após adicionar dois produtos, a listagem deve retornar uma lista com exatamente esses dois.', () => {
 
     // cenário
     const mercado = new Mercadinho();
