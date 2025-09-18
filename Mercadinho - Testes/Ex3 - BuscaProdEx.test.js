@@ -3,7 +3,7 @@
 const { Produto, Mercadinho } = require('./Mercadinho');
 
 describe('Busca de produto existente', () => {
-  it('Deve retornar o objeto correto ao buscar produto válido', () => {
+  it('Ao buscar um produto válido, o método deve retornar o objeto correto.', () => {
 
     // cenário
     const mercado = new Mercadinho();
