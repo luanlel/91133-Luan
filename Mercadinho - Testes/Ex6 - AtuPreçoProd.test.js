@@ -3,7 +3,7 @@
 const { Produto, Mercadinho } = require('./Mercadinho');
 
 describe('Atualização de preço do produto', () => {
-  it('Deve atualizar apenas o preço e manter os outros campos', () => {
+  it('Ao atualizar apenas o preco, o novo valor deve ser salvo. O retorno deve ser true.', () => {
 
     // cenário
     const mercado = new Mercadinho();
