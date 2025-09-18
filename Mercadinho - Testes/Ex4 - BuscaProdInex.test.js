@@ -3,7 +3,7 @@
 const { Produto, Mercadinho } = require('./Mercadinho');
 
 describe('Busca de produto inexistente', () => {
-  it('Deve retornar null ao buscar produto com ID inexistente', () => {
+  it('Ao buscar um produto com ID que não existe, o método deve retornar null.', () => {
 
     // cenário
     const mercado = new Mercadinho();
