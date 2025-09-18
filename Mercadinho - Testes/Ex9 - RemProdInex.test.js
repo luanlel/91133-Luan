@@ -3,7 +3,7 @@
 const { Produto, Mercadinho } = require('./Mercadinho');
 
 describe('Tentativa de remoção de produto inexistente', () => {
-  it('Deve retornar false e não alterar a lista', () => {
+  it('Ao tentar remover um produto que não existe, o método deve retornar false. A lista de produtos não deve ser alterada.', () => {
 
     // cenário
     const mercado = new Mercadinho();
